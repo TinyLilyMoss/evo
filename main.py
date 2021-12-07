@@ -17,6 +17,8 @@ screen = pygame.display.set_mode((100, 100))
 rngSTR = 0 ## this will be used later on for a UI to set up an enviornment for the creature 
 rngSPE = 0
 rngFOOD = 0
+animal = 0 
+animalRNG = (random.randint(0, 10))
 
 pygame.display.set_caption('new version')
 clock = pygame.time.Clock()
@@ -39,9 +41,17 @@ while True:
     stre = (random.randint(0, 10))
     foodneed = (random.randint(0, 10))
 
+    msg = f"the amount of creatures that are in your enviornment is {animal}"
+    print ("_________________________________________________")
     print (speed, stre, WORLDSPVALUE, WORLDSTRVALUE)
-
+    print ("/")
+    print (msg)
+    print ("/")
     ## the actual evolution part of the code
+
+    if animal > animalRNG:
+        print ("the enviornment is overpopulated, two of your creatures have died!")
+        animal -= 2
 
     if stre < WORLDSTRVALUE:
         print("lame guy (STR)")
@@ -54,13 +64,15 @@ while True:
                 if foodneed < FOOD: 
                     print ("your creature has died of starvation")
                 if foodneed >= FOOD:
-                    break
+                    print ("Congrats! you creature has lived")
+                    animal += 1
         elif stre  == WORLDSTRVALUE:
             print("satisfactory guy (SP)")
             if foodneed < FOOD: 
                 print ("your creature has died of starvation")
             if foodneed >= FOOD:
-                break
+                print ("Congrats! you creature has lived")
+                animal += 1
     elif stre  == WORLDSTRVALUE:
         print("satisfactory guy (STR)")
         if speed < WORLDSTRVALUE:
@@ -70,18 +82,15 @@ while True:
                 if foodneed < FOOD: 
                     print ("your creature has died of starvation")
                 if foodneed >= FOOD:
-                    break
+                    print ("Congrats! you creature has lived")
+                    animal += 1
         elif stre  == WORLDSTRVALUE:
             print("satisfactory guy (SP)")
             if foodneed < FOOD: 
                 print ("your creature has died of starvation")
             if foodneed >= FOOD:
-                break
+                print ("Congrats! you creature has lived")
+                animal += 1
 
     pygame.display.update()
     clock.tick(1)
-
-## prints when the creature is satisfactory :) 
-
-print ("your creature has past all tests!")
-print ("congrats on making a cool guy!")
