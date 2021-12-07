@@ -12,12 +12,10 @@ print("pygame has been booted")
 ## the pygame parts are only here because eventually this will render things
 ## maybe it can change color based on how close your get
 
-screen = pygame.display.set_mode((100, 100))
-
 ## all enviornmental values
 
 animal = 0 
-animalRNG = (random.randint(0, 10))
+animalRNG = (random.randint(0, 100))
 WORLDSPVALUE = (random.randint(0, 10))
 WORLDSTRVALUE = (random.randint(0, 10))
 FOOD = (random.randint(0, 10))
@@ -28,11 +26,7 @@ clock = pygame.time.Clock()
 font = pygame.font.Font('freesansbold.ttf', 10)
 
 while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit(0)
-    
+
     ## sets the random values for the creature to evolve with 
 
     speed = (random.randint(0, 10))
@@ -43,10 +37,13 @@ while True:
 
     msg = f"the amount of creatures that are in your enviornment is {animal}"
     print ("_________________________________________________")
+    print ("variable comparison")
     print (speed, stre, WORLDSPVALUE, WORLDSTRVALUE)
-    print ("/")
+    print (foodneed, FOOD)
+    print (animal, animalRNG)
+    print ("_________________________________________________")
     print (msg)
-    print ("/")
+    print ("_________________________________________________")
 
     ## overpopulation 
 
@@ -57,11 +54,11 @@ while True:
     ## the actual evolution part of the code
 
     if stre < WORLDSTRVALUE:
-        print("lame guy (STR)")
+        print("creature has died (STR)")
     elif stre > WORLDSTRVALUE:
         print("awesome guy (STR)")
         if speed < WORLDSTRVALUE:
-            print("lame guy (SP)")
+            print("creature has died (SP)")
         elif speed > WORLDSPVALUE:
                 print("awesome guy (SP) ")
                 if foodneed < FOOD: 
@@ -79,7 +76,7 @@ while True:
     elif stre  == WORLDSTRVALUE:
         print("satisfactory guy (STR)")
         if speed < WORLDSTRVALUE:
-            print("lame guy (SP)")
+            print("creature has died (SP)")
         elif speed > WORLDSPVALUE:
                 print("awesome guy (SP) ")
                 if foodneed < FOOD: 
@@ -95,5 +92,8 @@ while True:
                 print ("Congrats! you creature has lived")
                 animal += 1
 
-    pygame.display.update()
-    clock.tick(1)
+
+    type = input("""
+_________________________________________________
+press enter to create another creature""")
+    clock.tick(50)
