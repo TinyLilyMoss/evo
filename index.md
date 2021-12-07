@@ -8,4 +8,5 @@ I just wanted to make an evolution simulation to get better at working with RNG 
 
 ## people currently working on this project
 
-- lily
+- lily (lead python dev)
+- eli (website/github manager)
