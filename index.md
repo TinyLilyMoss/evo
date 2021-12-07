@@ -1,5 +1,11 @@
-##Welcome to the webiste for evo :) 
+## Welcome to the webiste for evo :) 
 
-this website is unfinished but you can download the evo simulation [here](https://github.com/TinyLilyMoss/evo)
+evo is an RNG based evolution simulation made in the python language, we're hoping to eventually create a well made and functional evolution simulation! 
 
-[Image](https://imgur.com/a/0ZTm8Kj)
+## reasons for this project
+
+I just wanted to make an evolution simulation to get better at working with RNG and pyton in general
+
+## people currently working on this project
+
+- lily
