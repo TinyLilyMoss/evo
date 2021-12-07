@@ -14,20 +14,18 @@ print("pygame has been booted")
 
 screen = pygame.display.set_mode((100, 100))
 
-rngSTR = 0 ## this will be used later on for a UI to set up an enviornment for the creature 
-rngSPE = 0
-rngFOOD = 0
+## all enviornmental values
+
 animal = 0 
 animalRNG = (random.randint(0, 10))
+WORLDSPVALUE = (random.randint(0, 10))
+WORLDSTRVALUE = (random.randint(0, 10))
+FOOD = (random.randint(0, 10))
 
 pygame.display.set_caption('new version')
 clock = pygame.time.Clock()
 
 font = pygame.font.Font('freesansbold.ttf', 10)
-
-WORLDSPVALUE = (random.randint(0, 10))
-WORLDSTRVALUE = (random.randint(0, 10))
-FOOD = (random.randint(0, 10))
 
 while True:
     for event in pygame.event.get():
@@ -41,17 +39,22 @@ while True:
     stre = (random.randint(0, 10))
     foodneed = (random.randint(0, 10))
 
+    ## prints the data in a semi readable form!
+
     msg = f"the amount of creatures that are in your enviornment is {animal}"
     print ("_________________________________________________")
     print (speed, stre, WORLDSPVALUE, WORLDSTRVALUE)
     print ("/")
     print (msg)
     print ("/")
-    ## the actual evolution part of the code
+
+    ## overpopulation 
 
     if animal > animalRNG:
         print ("the enviornment is overpopulated, two of your creatures have died!")
         animal -= 2
+    
+    ## the actual evolution part of the code
 
     if stre < WORLDSTRVALUE:
         print("lame guy (STR)")
