@@ -7,7 +7,6 @@ import sys
 import random
 
 pygame.init()
-print("pygame has been booted")
 
 ## the pygame parts are only here because eventually this will render things
 ## maybe it can change color based on how close your get
@@ -20,10 +19,7 @@ WORLDSPVALUE = (random.randint(0, 10))
 WORLDSTRVALUE = (random.randint(0, 10))
 FOOD = (random.randint(0, 10))
 
-pygame.display.set_caption('new version')
 clock = pygame.time.Clock()
-
-font = pygame.font.Font('freesansbold.ttf', 10)
 
 while True:
 
@@ -92,6 +88,7 @@ while True:
                 print ("Congrats! you creature has lived")
                 animal += 1
 
+## user input to make new creature 
 
     type = input("""
 _________________________________________________
