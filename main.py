@@ -1,3 +1,7 @@
+## coming soon - UI, enviornment custimization, generations, and more variables for evolving
+## and a less data oriented form of displaying the outcome of events
+## data oriented outcomes will be toggleable in the finished UI
+
 import pygame
 import sys
 import random
@@ -10,8 +14,14 @@ print("pygame has been booted")
 
 screen = pygame.display.set_mode((100, 100))
 
+rngSTR = 0 ## this will be used later on for a UI to set up an enviornment for the creature 
+rngSPE = 0
+rngFOOD = 0
+
 pygame.display.set_caption('new version')
 clock = pygame.time.Clock()
+
+font = pygame.font.Font('freesansbold.ttf', 10)
 
 WORLDSPVALUE = (random.randint(0, 10))
 WORLDSTRVALUE = (random.randint(0, 10))
@@ -23,11 +33,15 @@ while True:
             pygame.quit()
             sys.exit(0)
     
+    ## sets the random values for the creature to evolve with 
+
     speed = (random.randint(0, 10))
     stre = (random.randint(0, 10))
     foodneed = (random.randint(0, 10))
 
     print (speed, stre, WORLDSPVALUE, WORLDSTRVALUE)
+
+    ## the actual evolution part of the code
 
     if stre < WORLDSTRVALUE:
         print("lame guy (STR)")
@@ -66,6 +80,8 @@ while True:
 
     pygame.display.update()
     clock.tick(1)
+
+## prints when the creature is satisfactory :) 
 
 print ("your creature has past all tests!")
 print ("congrats on making a cool guy!")
