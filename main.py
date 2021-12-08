@@ -38,6 +38,7 @@ print("_________________________________________________________________________
 constant = int(input("""if you would like to generate creatures with no pauses for user 
 input, type one, zero to stop for user input! - """))
 print("_________________________________________________________________________________________")
+guy = 1
 if constant == 1: 
     guy = int(input("please type the ticks per second at which you want to generate creatures - "))
 print("_________________________________________________________________________________________")
