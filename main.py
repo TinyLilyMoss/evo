@@ -1,5 +1,5 @@
-## coming soon - UI, enviornment custimization, generations, and more variables for evolving
-## and a less data oriented form of displaying the outcome of events
+## coming soon - [~] UI, [V] enviornment custimization, [] generations, [] more variables for evolving
+## [] and a less data oriented form of displaying the outcome of events
 ## data oriented outcomes will be toggleable in the finished UI
 
 import pygame
@@ -102,7 +102,7 @@ while True:
                 print ("your creature has died of starvation")
             if foodneed >= FOOD:
                 print ("Congrats! you creature has lived")
-                animal += 1
+                animal += 1  
 
 ## user input to make new creature 
 
