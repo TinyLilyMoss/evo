@@ -82,14 +82,14 @@ while True:
                 print("awesome guy (SP) ")
                 if foodneed < FOOD: 
                     print ("your creature has died of starvation")
-                if foodneed >= FOOD:
+                elif foodneed >= FOOD:
                     print ("Congrats! you creature has lived")
                     animal += 1
         elif stre  == WORLDSTRVALUE:
             print("satisfactory guy (SP)")
             if foodneed < FOOD: 
                 print ("your creature has died of starvation")
-            if foodneed >= FOOD:
+            elif foodneed >= FOOD:
                 print ("Congrats! you creature has lived")
                 animal += 1
     elif stre  == WORLDSTRVALUE:
@@ -100,14 +100,14 @@ while True:
                 print("awesome guy (SP) ")
                 if foodneed < FOOD: 
                     print ("your creature has died of starvation")
-                if foodneed >= FOOD:
+                elif foodneed >= FOOD:
                     print ("Congrats! you creature has lived")
                     animal += 1
         elif stre  == WORLDSTRVALUE:
             print("satisfactory guy (SP)")
             if foodneed < FOOD: 
                 print ("your creature has died of starvation")
-            if foodneed >= FOOD:
+            elif foodneed >= FOOD:
                 print ("Congrats! you creature has lived")
                 animal += 1  
 
