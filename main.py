@@ -14,10 +14,26 @@ pygame.init()
 ## all enviornmental values
 
 animal = 0 
-animalRNG = (random.randint(0, 100))
-WORLDSPVALUE = (random.randint(0, 10))
-WORLDSTRVALUE = (random.randint(0, 10))
-FOOD = (random.randint(0, 10))
+animalRNG = int(input("""please enter the number of creatures allowed in your enviornment 
+between 0-100 you want to allow in your enviornment! type 999 for a random value! - """))
+if animalRNG == 999:
+    animalRNG = (random.randint(0, 100))
+print("_________________________________________________________________________________________")
+WORLDSPVALUE = int(input("""please enter the value of speed in your enviornment
+between 0-10! type 999 for a random value! - """))
+if WORLDSPVALUE == 999:
+    WORLDSPVALUE = (random.randint(0, 10))
+print("_________________________________________________________________________________________")
+WORLDSTRVALUE = int(input("""please enter the value of strength in your enviornment
+between 0-10! type 999 for a random value! - """))
+if WORLDSTRVALUE == 999:
+    WORLDSTRVALUE = (random.randint(0, 10))
+print("_________________________________________________________________________________________")
+FOOD = int(input("""please enter the amount of food in your enviornment
+between 0-10! type 999 for a random value! - """))
+if FOOD == 999:
+    FOOD = (random.randint(0, 10))
+print("_________________________________________________________________________________________")
 
 clock = pygame.time.Clock()
 
