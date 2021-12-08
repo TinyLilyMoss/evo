@@ -35,6 +35,13 @@ if FOOD == 999:
     FOOD = (random.randint(0, 10))
 print("_________________________________________________________________________________________")
 
+constant = int(input("""if you would like to generate creatures with no pauses for user 
+input, type one, zero to stop for user input! - """))
+print("_________________________________________________________________________________________")
+if constant == 1: 
+    guy = int(input("please type the ticks per second at which you want to generate creatures - "))
+print("_________________________________________________________________________________________")
+
 clock = pygame.time.Clock()
 
 while True:
@@ -106,7 +113,8 @@ while True:
 
 ## user input to make new creature 
 
-    type = input("""
+    if constant == 0:
+        type = input("""
 _________________________________________________
 press enter to create another creature""")
-    clock.tick(50)
+    clock.tick(guy)
