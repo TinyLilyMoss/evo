@@ -6,46 +6,60 @@ import pygame
 import sys
 import random
 
-pygame.init()
+## adding pygame shit for the UI, the UI wont be especially functional until later builds
 
-## the pygame parts are only here because eventually this will render things
-## maybe it can change color based on how close your get
+pygame.init()
+screen = pygame.display.set_mode((500, 500))
+
+## allows you to swap between modes
+
+termUI = int(input("type 1 for the termibnal build, and 0 for the UI build!"))
 
 ## all enviornmental values
 
-animal = 0 
-animalRNG = int(input("""please enter the number of creatures allowed in your enviornment 
-between 0-100 you want to allow in your enviornment! type 999 for a random value! - """))
-if animalRNG == 999:
-    animalRNG = (random.randint(0, 100))
-print("_________________________________________________________________________________________")
-WORLDSPVALUE = int(input("""please enter the value of speed in your enviornment
-between 0-10! type 999 for a random value! - """))
-if WORLDSPVALUE == 999:
-    WORLDSPVALUE = (random.randint(0, 10))
-print("_________________________________________________________________________________________")
-WORLDSTRVALUE = int(input("""please enter the value of strength in your enviornment
-between 0-10! type 999 for a random value! - """))
-if WORLDSTRVALUE == 999:
-    WORLDSTRVALUE = (random.randint(0, 10))
-print("_________________________________________________________________________________________")
-FOOD = int(input("""please enter the amount of food in your enviornment
-between 0-10! type 999 for a random value! - """))
-if FOOD == 999:
-    FOOD = (random.randint(0, 10))
-print("_________________________________________________________________________________________")
+if termUI == 1:
+    animal = 0 
+    animalRNG = int(input("""please enter the number of creatures allowed in your enviornment 
+    between 0-100 you want to allow in your enviornment! type 999 for a random value! - """))
+    if animalRNG == 999:
+        animalRNG = (random.randint(0, 100))
+    print("_________________________________________________________________________________________")
+    WORLDSPVALUE = int(input("""please enter the value of speed in your enviornment
+    between 0-10! type 999 for a random value! - """))
+    if WORLDSPVALUE == 999:
+        WORLDSPVALUE = (random.randint(0, 10))
+    print("_________________________________________________________________________________________")
+    WORLDSTRVALUE = int(input("""please enter the value of strength in your enviornment
+    between 0-10! type 999 for a random value! - """))
+    if WORLDSTRVALUE == 999:
+        WORLDSTRVALUE = (random.randint(0, 10))
+    print("_________________________________________________________________________________________")
+    FOOD = int(input("""please enter the amount of food in your enviornment
+    between 0-10! type 999 for a random value! - """))
+    if FOOD == 999:
+        FOOD = (random.randint(0, 10))
+    print("_________________________________________________________________________________________")
 
-constant = int(input("""if you would like to generate creatures with no pauses for user 
-input, type one, zero to stop for user input! - """))
-print("_________________________________________________________________________________________")
-guy = 1
-if constant == 1: 
-    guy = int(input("please type the ticks per second at which you want to generate creatures - "))
-print("_________________________________________________________________________________________")
+    constant = int(input("""if you would like to generate creatures with no pauses for user 
+    input, type one, zero to stop for user input! - """))
+    print("_________________________________________________________________________________________")
+    guy = 1
+    if constant == 1: 
+        guy = int(input("please type the ticks per second at which you want to generate creatures - "))
+    print("_________________________________________________________________________________________")
 
-clock = pygame.time.Clock()
+while termUI == 0: 
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit(0)
 
-while True:
+    pygame.display.update()
+    clock = pygame.time.Clock(60)
+
+
+while termUI == 1:
+
 
     ## sets the random values for the creature to evolve with 
 
