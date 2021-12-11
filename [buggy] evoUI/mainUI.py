@@ -13,7 +13,7 @@ screen = pygame.display.set_mode((500, 500))
 
 ## allows you to swap between modes
 
-termUI = int(input("type 1 for the termibnal build, and 0 for the UI build!"))
+termUI = int(input("type 1 for the terminal build, and 0 for the UI build!"))
 
 ## clock ticking 
 
