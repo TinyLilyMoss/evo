@@ -15,6 +15,10 @@ screen = pygame.display.set_mode((500, 500))
 
 termUI = int(input("type 1 for the termibnal build, and 0 for the UI build!"))
 
+## clock ticking 
+
+clock = pygame.time.Clock()
+
 ## all enviornmental values
 
 if termUI == 1:
@@ -48,18 +52,40 @@ if termUI == 1:
         guy = int(input("please type the ticks per second at which you want to generate creatures - "))
     print("_________________________________________________________________________________________")
 
+
+white = (255, 255, 255)
+font = pygame.font.Font('freesansbold.ttf', 20)
+text = font.render("enviornmental" , True, white)
+textset = font.render("settings", True, white)
+
+## infinite loop for UI 
+
 while termUI == 0: 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit(0)
+    
+    green = pygame.Surface((300, 500))
+    green.fill((10, 100, 10))
+    screen.blit(green, (0, 0))
+
+    
+    linebottom = pygame.Surface((200, 3))
+    linebottom.fill((255, 255, 255))
+    screen.blit(linebottom, (300, 90))
+
+    lineside = pygame.Surface((3, 500))
+    lineside.fill((255, 255, 255))
+    screen.blit(lineside, (300, 0))
+
+    screen.blit(text, (330, 30))
+    screen.blit(textset, (350, 50))
 
     pygame.display.update()
-    clock = pygame.time.Clock(60)
-
+    clock.tick(60)
 
 while termUI == 1:
-
 
     ## sets the random values for the creature to evolve with 
 
