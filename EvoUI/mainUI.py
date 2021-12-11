@@ -83,6 +83,8 @@ text = font.render("enviornmental" , True, white)
 textset = font.render("settings", True, white)
 food = font.render("food amount" , True, white)
 food2 = font.render(str(FOOD) , True, white)
+ncreature = font.render("overpopulation" , True, white)
+ncreature2 = font.render(str(animalRNG) , True, white)
 
 ## infinite loop for UI 
 
@@ -109,6 +111,9 @@ while termUI == 0:
 
     screen.blit(food, (330, 100))
     screen.blit(food2, (330, 130))
+
+    screen.blit(ncreature, (330, 160))
+    screen.blit(ncreature2, (330, 190))
 
     pygame.display.update()
     clock.tick(60)
