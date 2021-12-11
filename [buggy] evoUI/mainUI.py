@@ -5,6 +5,17 @@
 import pygame
 import sys
 import random
+import sqlite3 as sqlLite 
+
+
+##initate db connection 
+con =  sqlLite.connect('game.db')
+cur = con.cursor()
+
+#create table
+# cur.execute('''CREATE TABLE creatures
+#                (ID int, name text, strength int, speed int''')
+
 
 ## adding pygame shit for the UI, the UI wont be especially functional until later builds
 
@@ -20,6 +31,8 @@ termUI = int(input("type 1 for the terminal build, and 0 for the UI build!"))
 clock = pygame.time.Clock()
 
 ## all enviornmental values
+
+
 
 if termUI == 1:
     animal = 0 
