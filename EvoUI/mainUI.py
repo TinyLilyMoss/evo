@@ -52,11 +52,37 @@ if termUI == 1:
         guy = int(input("please type the ticks per second at which you want to generate creatures - "))
     print("_________________________________________________________________________________________")
 
+if termUI == 0:
+    animal = 0 
+    animalRNG = int(input("""please enter the number of creatures allowed in your enviornment 
+    between 0-100 you want to allow in your enviornment! type 999 for a random value! - """))
+    if animalRNG == 999:
+        animalRNG = (random.randint(0, 100))
+    print("_________________________________________________________________________________________")
+    WORLDSPVALUE = int(input("""please enter the value of speed in your enviornment
+    between 0-10! type 999 for a random value! - """))
+    if WORLDSPVALUE == 999:
+        WORLDSPVALUE = (random.randint(0, 10))
+    print("_________________________________________________________________________________________")
+    WORLDSTRVALUE = int(input("""please enter the value of strength in your enviornment
+    between 0-10! type 999 for a random value! - """))
+    if WORLDSTRVALUE == 999:
+        WORLDSTRVALUE = (random.randint(0, 10))
+    print("_________________________________________________________________________________________")
+    FOOD = int(input("""please enter the amount of food in your enviornment
+    between 0-10! type 999 for a random value! - """))
+    if FOOD == 999:
+        FOOD = (random.randint(0, 10))
+    print("_________________________________________________________________________________________")
+    
+
 
 white = (255, 255, 255)
 font = pygame.font.Font('freesansbold.ttf', 20)
 text = font.render("enviornmental" , True, white)
 textset = font.render("settings", True, white)
+food = font.render("food amount" , True, white)
+food2 = font.render(str(FOOD) , True, white)
 
 ## infinite loop for UI 
 
@@ -69,7 +95,6 @@ while termUI == 0:
     green = pygame.Surface((300, 500))
     green.fill((10, 100, 10))
     screen.blit(green, (0, 0))
-
     
     linebottom = pygame.Surface((200, 3))
     linebottom.fill((255, 255, 255))
@@ -81,6 +106,9 @@ while termUI == 0:
 
     screen.blit(text, (330, 30))
     screen.blit(textset, (350, 50))
+
+    screen.blit(food, (330, 100))
+    screen.blit(food2, (330, 130))
 
     pygame.display.update()
     clock.tick(60)
