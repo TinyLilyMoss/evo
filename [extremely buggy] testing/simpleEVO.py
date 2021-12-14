@@ -21,23 +21,10 @@ c = []
 
 clock = pygame.time.Clock()
 
+print ("123")
 while True:
 
-
-    ## sets the random values for the creature to evolve with 
-    speed = (random.randint(0, 10))
-    stre = (random.randint(0, 10))
-    foodneed = (random.randint(0, 10))
     ## prints the data in a semi readable form!
-    msg = f"the amount of creatures that are in your enviornment is {animal}"
-    print ("_________________________________________________")
-    print ("variable comparison")
-    print (speed, stre, WORLDSPVALUE, WORLDSTRVALUE)
-    print (foodneed, FOOD)
-    print (animal, animalRNG)
-    print ("_________________________________________________")
-    print (msg)
-    print ("_________________________________________________")
     ## overpopulation 
     
     if animal > animalRNG:
@@ -45,12 +32,82 @@ while True:
 
     ## the actual evolution part of the code
 
+    while win == 0:
+        speed = (random.randint(0, 10))
+        stre = (random.randint(0, 10))
+        foodneed = (random.randint(0, 10))
+        print ("test")
+        msg = f"the amount of creatures that are in your enviornment is {animal}"
+        print ("_________________________________________________")
+        print ("variable comparison")
+        print (speed, stre, WORLDSPVALUE, WORLDSTRVALUE)
+        print (foodneed, FOOD)
+        print (animal, animalRNG)
+        print ("_________________________________________________")
+        print (msg)
+        print ("_________________________________________________")
+        if stre < WORLDSTRVALUE:
+            print("creature has died (STR)")
+        elif stre > WORLDSTRVALUE:
+            print("awesome guy (STR)")
+            if speed < WORLDSTRVALUE:
+                print("creature has died (SP)")
+            elif speed > WORLDSPVALUE:
+                    print("awesome guy (SP) ")
+                    if foodneed < FOOD: 
+                        print ("your creature has died of starvation")
+                    elif foodneed >= FOOD:
+                        print ("Congrats! you creature has lived")
+                        animal += 1
+                        win += 1
+                        print ("moving on")
+            elif stre  == WORLDSTRVALUE:
+                print("satisfactory guy (SP)")
+                if foodneed < FOOD: 
+                    print ("your creature has died of starvation")
+                elif foodneed >= FOOD:
+                    print ("Congrats! you creature has lived")
+                    animal += 1
+                    win += 1
+                    print ("moving on")
+            elif stre  == WORLDSTRVALUE:
+                print("satisfactory guy (STR)")
+                if speed < WORLDSTRVALUE:
+                    print("creature has died (SP)")
+                elif speed > WORLDSPVALUE:
+                        print("awesome guy (SP) ")
+                        if foodneed < FOOD: 
+                            print ("your creature has died of starvation")
+                        elif foodneed >= FOOD:
+                            print ("Congrats! you creature has lived")
+                            animal += 1
+                            win += 1
+                            print ("moving on")
+                elif stre  == WORLDSTRVALUE:
+                    print("satisfactory guy (SP)")
+                    if foodneed < FOOD: 
+                        print ("your creature has died of starvation")
+                    elif foodneed >= FOOD:
+                        print ("Congrats! you creature has lived")
+                        animal += 1  
+                        win += 1
+                        print ("moving on")
+            clock.tick(guy)
+
     while win == 1:
         x = speed 
         x += (random.randint(-1, 1))
-        y = stre 
+        y = stre
         y += (random.randint(-1, 1))
-        
+        msg = f"the amount of creatures that are in your enviornment is {animal}"
+        print ("_________________________________________________")
+        print ("variable comparison")
+        print (x, y, WORLDSPVALUE, WORLDSTRVALUE)
+        print (foodneed, FOOD)
+        print (animal, animalRNG)
+        print ("_________________________________________________")
+        print (msg)
+        print ("_________________________________________________")
         if y < WORLDSTRVALUE:
             print("creature has died (STR)")
         elif y > WORLDSTRVALUE:
@@ -89,52 +146,4 @@ while True:
                 elif foodneed >= FOOD:
                     print ("Congrats! you creature has lived")
                     animal += 1  
-        clock.tick(guy)
-    while win == 0:
-        if stre < WORLDSTRVALUE:
-            print("creature has died (STR)")
-        elif stre > WORLDSTRVALUE:
-            print("awesome guy (STR)")
-            if speed < WORLDSTRVALUE:
-                print("creature has died (SP)")
-            elif speed > WORLDSPVALUE:
-                    print("awesome guy (SP) ")
-                    if foodneed < FOOD: 
-                        print ("your creature has died of starvation")
-                    elif foodneed >= FOOD:
-                        print ("Congrats! you creature has lived")
-                        animal += 1
-                        win += 1
-                        print ("moving on")
-            elif stre  == WORLDSTRVALUE:
-                print("satisfactory guy (SP)")
-                if foodneed < FOOD: 
-                    print ("your creature has died of starvation")
-                elif foodneed >= FOOD:
-                    print ("Congrats! you creature has lived")
-                    animal += 1
-                    win += 1
-                    print ("moving on")
-        elif stre  == WORLDSTRVALUE:
-            print("satisfactory guy (STR)")
-            if speed < WORLDSTRVALUE:
-                print("creature has died (SP)")
-            elif speed > WORLDSPVALUE:
-                    print("awesome guy (SP) ")
-                    if foodneed < FOOD: 
-                        print ("your creature has died of starvation")
-                    elif foodneed >= FOOD:
-                        print ("Congrats! you creature has lived")
-                        animal += 1
-                        win += 1
-                        print ("moving on")
-            elif stre  == WORLDSTRVALUE:
-                print("satisfactory guy (SP)")
-                if foodneed < FOOD: 
-                    print ("your creature has died of starvation")
-                elif foodneed >= FOOD:
-                    print ("Congrats! you creature has lived")
-                    animal += 1  
-                    win += 1
-                    print ("moving on")
         clock.tick(guy)
