@@ -5,17 +5,6 @@
 import pygame
 import sys
 import random
-import sqlite3 as sqlLite 
-
-
-##initate db connection 
-con =  sqlLite.connect('game.db')
-cur = con.cursor()
-
-#create table
-# cur.execute('''CREATE TABLE creatures
-#                (ID int, name text, strength int, speed int''')
-
 
 ## adding pygame shit for the UI, the UI wont be especially functional until later builds
 
@@ -205,4 +194,3 @@ while termUI == 1:
 _________________________________________________
 press enter to create another creature""")
     clock.tick(guy)
-    
