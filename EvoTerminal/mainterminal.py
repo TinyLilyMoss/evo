@@ -43,6 +43,8 @@ if constant == 1:
     guy = int(input("please type the ticks per second at which you want to generate creatures - "))
 print("_________________________________________________________________________________________")
 
+win = 0
+
 clock = pygame.time.Clock()
 
 while True:
@@ -86,6 +88,7 @@ while True:
                 elif foodneed >= FOOD:
                     print ("Congrats! you creature has lived")
                     animal += 1
+                    win += 1
         elif stre  == WORLDSTRVALUE:
             print("satisfactory guy (SP)")
             if foodneed < FOOD: 
@@ -93,6 +96,7 @@ while True:
             elif foodneed >= FOOD:
                 print ("Congrats! you creature has lived")
                 animal += 1
+                win += 1
     elif stre  == WORLDSTRVALUE:
         print("satisfactory guy (STR)")
         if speed < WORLDSTRVALUE:
@@ -104,6 +108,7 @@ while True:
                 elif foodneed >= FOOD:
                     print ("Congrats! you creature has lived")
                     animal += 1
+                    win += 1
         elif stre  == WORLDSTRVALUE:
             print("satisfactory guy (SP)")
             if foodneed < FOOD: 
@@ -111,6 +116,7 @@ while True:
             elif foodneed >= FOOD:
                 print ("Congrats! you creature has lived")
                 animal += 1  
+                win += 1
 
 ## user input to make new creature 
 
