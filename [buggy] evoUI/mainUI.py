@@ -21,8 +21,6 @@ clock = pygame.time.Clock()
 
 ## all enviornmental values
 
-
-
 if termUI == 1:
     animal = 0 
     animalRNG = int(input("""please enter the number of creatures allowed in your enviornment 
