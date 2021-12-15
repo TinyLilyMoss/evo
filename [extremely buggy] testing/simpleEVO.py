@@ -94,11 +94,13 @@ while True:
                         print ("moving on")
             clock.tick(guy)
 
-    while win == 1:
+    while win >= 1:
         x = speed 
-        x += (random.randint(-1, 1))
+        x += (random.randint(-1, win))
         y = stre
-        y += (random.randint(-1, 1))
+        y += (random.randint(-1, win))
+        if win > 5: 
+            win -= 2
         msg = f"the amount of creatures that are in your enviornment is {animal}"
         print ("_________________________________________________")
         print ("variable comparison")
@@ -121,6 +123,7 @@ while True:
                     elif foodneed >= FOOD:
                         print ("Congrats! you creature has lived")
                         animal += 1
+                        win += 1
             elif y  == WORLDSTRVALUE:
                 print("satisfactory guy (SP)")
                 if foodneed < FOOD: 
@@ -139,6 +142,7 @@ while True:
                     elif foodneed >= FOOD:
                         print ("Congrats! you creature has lived")
                         animal += 1
+                        win += 1
             elif y == WORLDSTRVALUE:
                 print("satisfactory guy (SP)")
                 if foodneed < FOOD: 
