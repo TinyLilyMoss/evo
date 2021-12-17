@@ -19,11 +19,21 @@ a = []
 b = []
 c = []
 
+def crunk():
+    print ("_________________________________________________")
+    print ("variable comparison")
+    print (speed, stre, WORLDSPVALUE, WORLDSTRVALUE)
+    print (foodneed, FOOD)
+    print (animal, animalRNG)
+    print ("_________________________________________________")
+    print (f"the amount of creatures that are in your enviornment is {animal}")
+    print ("_________________________________________________")
+
 clock = pygame.time.Clock()
 
 print ("123")
 while True:
-
+    
     ## prints the data in a semi readable form!
     ## overpopulation 
     
@@ -36,16 +46,7 @@ while True:
         speed = (random.randint(0, 10))
         stre = (random.randint(0, 10))
         foodneed = (random.randint(0, 10))
-        print ("test")
-        msg = f"the amount of creatures that are in your enviornment is {animal}"
-        print ("_________________________________________________")
-        print ("variable comparison")
-        print (speed, stre, WORLDSPVALUE, WORLDSTRVALUE)
-        print (foodneed, FOOD)
-        print (animal, animalRNG)
-        print ("_________________________________________________")
-        print (msg)
-        print ("_________________________________________________")
+        crunk()
         if stre < WORLDSTRVALUE:
             print("creature has died (STR)")
         elif stre > WORLDSTRVALUE:
