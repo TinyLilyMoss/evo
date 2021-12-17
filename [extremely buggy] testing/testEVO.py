@@ -19,6 +19,8 @@ a = []
 b = []
 c = []
 
+## print command to avoid using in blocks
+
 def CRUNK():
     print ("_________________________________________________")
     print ("variable comparison")
@@ -29,7 +31,8 @@ def CRUNK():
     print (f"the amount of creatures that are in your enviornment is {animal}")
     print ("_________________________________________________")
 
-    
+## print command to avoid using in blocks
+
 def CRUNK2():
     print ("_________________________________________________")
     print ("variable comparison")
