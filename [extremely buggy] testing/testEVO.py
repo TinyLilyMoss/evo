@@ -19,10 +19,21 @@ a = []
 b = []
 c = []
 
-def crunk():
+def CRUNK():
     print ("_________________________________________________")
     print ("variable comparison")
     print (speed, stre, WORLDSPVALUE, WORLDSTRVALUE)
+    print (foodneed, FOOD)
+    print (animal, animalRNG)
+    print ("_________________________________________________")
+    print (f"the amount of creatures that are in your enviornment is {animal}")
+    print ("_________________________________________________")
+
+    
+def CRUNK2():
+    print ("_________________________________________________")
+    print ("variable comparison")
+    print (x, y, WORLDSPVALUE, WORLDSTRVALUE)
     print (foodneed, FOOD)
     print (animal, animalRNG)
     print ("_________________________________________________")
@@ -46,7 +57,7 @@ while True:
         speed = (random.randint(0, 10))
         stre = (random.randint(0, 10))
         foodneed = (random.randint(0, 10))
-        crunk()
+        CRUNK()
         if stre < WORLDSTRVALUE:
             print("creature has died (STR)")
         elif stre > WORLDSTRVALUE:
@@ -102,15 +113,7 @@ while True:
         y += (random.randint(-1, win))
         if win > 5: 
             win -= 2
-        msg = f"the amount of creatures that are in your enviornment is {animal}"
-        print ("_________________________________________________")
-        print ("variable comparison")
-        print (x, y, WORLDSPVALUE, WORLDSTRVALUE)
-        print (foodneed, FOOD)
-        print (animal, animalRNG)
-        print ("_________________________________________________")
-        print (msg)
-        print ("_________________________________________________")
+        CRUNK2()
         if y < WORLDSTRVALUE:
             print("creature has died (STR)")
         elif y > WORLDSTRVALUE:
