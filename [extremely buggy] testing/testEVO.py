@@ -1,8 +1,12 @@
+## imports
+
 import pygame
 import sys
 import random
 
 pygame.init()
+
+## variables
 
 animal = 0 
 animalRNG = (random.randint(0, 100))
@@ -14,10 +18,6 @@ win = 0
 CREATURESDEAD = 0
 x = []
 y = []
-z = []
-a = []
-b = []
-c = []
 
 ## print command to avoid using in blocks
 
@@ -45,7 +45,6 @@ def CRUNK2():
 
 clock = pygame.time.Clock()
 
-print ("123")
 while True:
     
     ## prints the data in a semi readable form!
@@ -54,7 +53,7 @@ while True:
     if animal > animalRNG:
         animal -= 2  
 
-    ## the actual evolution part of the code
+    ## RNG creature generation
 
     while win == 0:
         speed = (random.randint(0, 10))
@@ -108,6 +107,8 @@ while True:
                         win += 1
                         print ("moving on")
             clock.tick(guy)
+
+## evolution 
 
     while win >= 1:
         x = speed 
