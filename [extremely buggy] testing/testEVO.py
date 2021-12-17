@@ -47,7 +47,6 @@ clock = pygame.time.Clock()
 
 while True:
     
-    ## prints the data in a semi readable form!
     ## overpopulation 
     
     if animal > animalRNG:
@@ -111,11 +110,11 @@ while True:
 ## evolution 
 
     while win >= 1:
-        x = speed 
+        x = speed
         x += (random.randint(-1, win))
         y = stre
         y += (random.randint(-1, win))
-        if win > 5: 
+        if win > 5:
             win -= 2
         CRUNK2()
         if y < WORLDSTRVALUE:
