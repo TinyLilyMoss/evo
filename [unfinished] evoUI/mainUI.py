@@ -6,9 +6,10 @@ import pygame
 import sys
 import random
 
-## adding pygame shit for the UI, the UI wont be especially functional until later builds
-
 pygame.init()
+pygame.display.set_caption('Evo')
+programIcon = pygame.image.load('[unfinished] evoUI\assets\Icons\IMG_3924.png')
+pygame.display.set_icon(programIcon)
 screen = pygame.display.set_mode((500, 500))
 
 ## allows you to swap between modes
