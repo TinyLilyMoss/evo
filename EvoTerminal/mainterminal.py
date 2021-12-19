@@ -103,7 +103,7 @@ while True:
 ## RNG birth
 
     while win == 0:
-        
+
         speed = (random.randint(0, 10))
         stre = (random.randint(0, 10))
         foodneed = (random.randint(0, 10))
@@ -268,4 +268,3 @@ _________________________________________________
 press enter to create another creature""")
             clock.tick(int(guy))
                     
-
