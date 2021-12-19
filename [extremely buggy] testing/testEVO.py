@@ -21,7 +21,7 @@ y = []
 
 ## print command to avoid using in blocks
 
-def CRUNK():
+def MSG():
     print ("_________________________________________________")
     print ("variable comparison")
     print (speed, stre, WORLDSPVALUE, WORLDSTRVALUE)
@@ -33,7 +33,7 @@ def CRUNK():
 
 ## print command to avoid using in blocks
 
-def CRUNK2():
+def MSG2():
     print ("_________________________________________________")
     print ("variable comparison")
     print (x, y, WORLDSPVALUE, WORLDSTRVALUE)
@@ -58,7 +58,7 @@ while True:
         speed = (random.randint(0, 10))
         stre = (random.randint(0, 10))
         foodneed = (random.randint(0, 10))
-        CRUNK()
+        MSG()
         if stre < WORLDSTRVALUE:
             print("creature has died (STR)")
         elif stre > WORLDSTRVALUE:
@@ -116,7 +116,7 @@ while True:
         y += (random.randint(-1, win))
         if win > 5:
             win -= 2
-        CRUNK2()
+        MSG2()
         if y < WORLDSTRVALUE:
             print("creature has died (STR)")
         elif y > WORLDSTRVALUE:
