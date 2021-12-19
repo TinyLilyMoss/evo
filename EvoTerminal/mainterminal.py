@@ -103,54 +103,73 @@ while True:
 ## RNG birth
 
     while win == 0:
+        
         speed = (random.randint(0, 10))
         stre = (random.randint(0, 10))
         foodneed = (random.randint(0, 10))
+
         MSG()
+
         if stre < WORLDSTRVALUE:
             print("creature has died (STR)")
+
         elif stre > WORLDSTRVALUE:
             print("awesome guy (STR)")
+
             if speed < WORLDSTRVALUE:
                 print("creature has died (SP)")
+
             elif speed > WORLDSPVALUE:
                     print("awesome guy (SP) ")
+
                     if foodneed < FOOD: 
                         print ("your creature has died of starvation")
+
                     elif foodneed >= FOOD:
                         print ("Congrats! you creature has lived")
                         animal += 1
                         win += 1
                         print ("moving on")
                         line()
+
             elif stre  == WORLDSTRVALUE:
                 print("satisfactory guy (SP)")
+
                 if foodneed < FOOD: 
                     print ("your creature has died of starvation")
+                    
                 elif foodneed >= FOOD:
                     print ("Congrats! you creature has lived")
                     animal += 1
                     win += 1
                     print ("moving on")
                     line()
+
             elif stre  == WORLDSTRVALUE:
                 print("satisfactory guy (STR)")
+
                 if speed < WORLDSTRVALUE:
                     print("creature has died (SP)")
+
                 elif speed > WORLDSPVALUE:
                         print("awesome guy (SP) ")
+
                         if foodneed < FOOD: 
                             print ("your creature has died of starvation")
+
                         elif foodneed >= FOOD:
                             print ("Congrats! you creature has lived")
                             animal += 1
                             win += 1
                             print ("moving on")
                             line()
+
                 elif stre  == WORLDSTRVALUE:
                     print("satisfactory guy (SP)")
+
                     if foodneed < FOOD: 
                         print ("your creature has died of starvation")
+
                     elif foodneed >= FOOD:
                         print ("Congrats! you creature has lived")
                         animal += 1  
@@ -178,44 +197,62 @@ press enter to create another creature""")
         y += (random.randint(-1, win))
         if win > 5:
             win -= 2
+        
         MSG2()
+        
         if y < WORLDSTRVALUE:
             print("creature has died (STR)")
+
         elif y > WORLDSTRVALUE:
             print("awesome guy (STR)")
+
             if x < WORLDSTRVALUE:
                 print("creature has died (SP)")
+                
             elif x > WORLDSPVALUE:
                     print("awesome guy (SP) ")
+
                     if foodneed < FOOD: 
                         print ("your creature has died of starvation")
+
                     elif foodneed >= FOOD:
                         print ("Congrats! you creature has lived")
                         animal += 1
                         win += 1
+
             elif y  == WORLDSTRVALUE:
                 print("satisfactory guy (SP)")
+
                 if foodneed < FOOD: 
                     print ("your creature has died of starvation")
+
                 elif foodneed >= FOOD:
                     print ("Congrats! you creature has lived")
                     animal += 1
+
         elif y == WORLDSTRVALUE:
             print("satisfactory guy (STR)")
+
             if x < WORLDSTRVALUE:
                 print("creature has died (SP)")
+
             elif x > WORLDSPVALUE:
                     print("awesome guy (SP) ")
+
                     if foodneed < FOOD: 
                         print ("your creature has died of starvation")
+
                     elif foodneed >= FOOD:
                         print ("Congrats! you creature has lived")
                         animal += 1
                         win += 1
+
             elif y == WORLDSTRVALUE:
                 print("satisfactory guy (SP)")
+
                 if foodneed < FOOD: 
                     print ("your creature has died of starvation")
+
                 elif foodneed >= FOOD:
                     print ("Congrats! you creature has lived")
                     animal += 1
