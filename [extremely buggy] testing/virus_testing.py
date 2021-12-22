@@ -199,7 +199,7 @@ press enter to create another creature""")
         if win > 5:
             win -= 2
         if virus >= 8: 
-            animal = animal / 2
+            animal == animal / 2
             win == 0
             print ("VIRUSS!!! AHHHH!")
         
