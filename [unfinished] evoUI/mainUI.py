@@ -149,7 +149,7 @@ while termUI == 1:
         print("creature has died (STR)")
     elif stre > WORLDSTRVALUE:
         print("awesome guy (STR)")
-        if speed < WORLDSTRVALUE:
+        if speed < WORLDSPVALUE:
             print("creature has died (SP)")
         elif speed > WORLDSPVALUE:
                 print("awesome guy (SP) ")
@@ -167,7 +167,7 @@ while termUI == 1:
                 animal += 1
     elif stre  == WORLDSTRVALUE:
         print("satisfactory guy (STR)")
-        if speed < WORLDSTRVALUE:
+        if speed < WORLDSPVALUE:
             print("creature has died (SP)")
         elif speed > WORLDSPVALUE:
                 print("awesome guy (SP) ")
