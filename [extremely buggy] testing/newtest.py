@@ -45,6 +45,7 @@ CREATURESDEAD = 0 ## for later
 x = []
 y = []
 animal = 0 
+virus = (random.randint(0, 10))
 line()
 
 ## number of creatures allowed in the enviormnet is set here 
@@ -225,6 +226,8 @@ press enter to create another creature""")
         y += (random.randint(-1, win))
         if win > 5:
             win -= 2
+        if virus >= 8: 
+            animal
         
         ## data values for decent creatures
 
