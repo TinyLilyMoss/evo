@@ -239,7 +239,7 @@ press enter to create another creature""")
         elif y > WORLDSTRVALUE:
             print("awesome guy (STR)")
 
-            if x < WORLDSTRVALUE:
+            if x < WORLDSPVALUE:
                 print("creature has died (SP)")
                 
             elif x > WORLDSPVALUE:
@@ -266,7 +266,7 @@ press enter to create another creature""")
         elif y == WORLDSTRVALUE:
             print("satisfactory guy (STR)")
 
-            if x < WORLDSTRVALUE:
+            if x < WORLDSPVALUE:
                 print("creature has died (SP)")
 
             elif x > WORLDSPVALUE:
