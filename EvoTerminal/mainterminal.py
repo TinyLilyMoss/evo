@@ -143,7 +143,7 @@ while True:
         elif stre > WORLDSTRVALUE:
             print("awesome guy (STR)")
 
-            if speed < WORLDSTRVALUE:
+            if speed < WORLDSPVALUE:
                 print("creature has died (SP)")
 
             elif speed > WORLDSPVALUE:
@@ -175,7 +175,7 @@ while True:
             elif stre  == WORLDSTRVALUE:
                 print("satisfactory guy (STR)")
 
-                if speed < WORLDSTRVALUE:
+                if speed < WORLDSPVALUE:
                     print("creature has died (SP)")
 
                 elif speed > WORLDSPVALUE:
@@ -238,7 +238,7 @@ press enter to create another creature""")
         elif y > WORLDSTRVALUE:
             print("awesome guy (STR)")
 
-            if x < WORLDSTRVALUE:
+            if x < WORLDSPVALUE:
                 print("creature has died (SP)")
                 
             elif x > WORLDSPVALUE:
@@ -265,7 +265,7 @@ press enter to create another creature""")
         elif y == WORLDSTRVALUE:
             print("satisfactory guy (STR)")
 
-            if x < WORLDSTRVALUE:
+            if x < WORLDSPVALUE:
                 print("creature has died (SP)")
 
             elif x > WORLDSPVALUE:
@@ -279,7 +279,7 @@ press enter to create another creature""")
                         animal += 1
                         win += 1
 
-            elif y == WORLDSTRVALUE:
+            elif y == WORLDSPVALUE:
                 print("satisfactory guy (SP)")
 
                 if foodneed < FOOD: 
